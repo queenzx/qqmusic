@@ -76,7 +76,7 @@ module.exports = {
     // plugins代表插件,是一个数组
     plugins:[
         new HtmlPlugin({
-            template:'./src/testWeb.html'
+            template:'./public/index.html'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
