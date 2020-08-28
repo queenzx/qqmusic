@@ -7,6 +7,7 @@ let { CleanWebpackPlugin } = require('clean-webpack-plugin');
 let MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // vue插件
 let VuePlugin = require('vue-loader/lib/plugin');
+let path = require('path');
 
 module.exports = {
     resolve:{
@@ -14,7 +15,8 @@ module.exports = {
         extensions:[".js",".css",".vue",".styl"],
         // 别名
         alias:{
-            "@css":"../css"
+            "@common":path.resolve(__dirname,"src/common"),
+            "@comp":path.resolve(__dirname,"src/components")
         }
     },
     //入口文件

@@ -9,8 +9,9 @@ export default {};
 </script>
 
 <style scoped lang="stylus">
-@import '../../common/stylus/variable';
-@import '../../common/stylus/mixin';
+// 加波浪线~表示绝对路径
+@import '~@common/stylus/variable';
+@import '~@common/stylus/mixin';
 
 .m-header {
   position: relative;
