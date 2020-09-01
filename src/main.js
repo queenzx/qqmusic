@@ -10,6 +10,9 @@ fastclick.attach(document.body)
 // 引入全局样式
 import "./common/stylus/index"
 
+import 'vant/lib/swipe/style'
+import 'vant/lib/swipe-item/style'
+
 import {Swipe,SwipeItem} from 'vant'
 
 Vue.use(Swipe);
