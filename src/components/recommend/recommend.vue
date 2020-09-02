@@ -1,16 +1,18 @@
 <template>
   <div class="recommend">
-    <div class="recommend-content">
-      <!-- 轮播图 -->
-      <div class="slider-wrapper">
-        <Slider :pics="slider"></Slider>
+    <Scroll ref="scroll" class="recommend-content">
+      <div>
+        <!-- 轮播图 -->
+        <div class="slider-wrapper">
+          <Slider :pics="slider"></Slider>
+        </div>
+        <!-- 热门歌曲列表 -->
+        <div class="recommend-list">
+          <h1 class="list-title">热门歌曲推荐</h1>
+          <RecommendList></RecommendList>
+        </div>
       </div>
-      <!-- 热门歌曲列表 -->
-      <div class="recommend-list">
-        <h1 class="list-title">热门歌曲推荐</h1>
-        <RecommendList></RecommendList>
-      </div>
-    </div>
+    </Scroll>
   </div>
 </template>
 
@@ -18,6 +20,7 @@
 import Slider from '../../base/slider/Slider'
 import recomm from '../../api/recommend'
 import RecommendList from './recommend-list'
+import Scroll from '../../base/scroll/Scroll'
 
 export default {
   data() {
@@ -39,7 +42,8 @@ export default {
   },
   components:{
     Slider,
-    RecommendList
+    RecommendList,
+    Scroll
   },
 }
 </script>
